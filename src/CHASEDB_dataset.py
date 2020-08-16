@@ -13,7 +13,7 @@ from patch_extracting import get_imarr, extract
 
 
 class CHACEDB_dataset(data.Dataset):
-    def __init__(self, train=True, online=False):
+    def __init__(self, train=True, online=True):
         '''
         when oline set True, it will extract patch from preprocessed images, \
         instead of read patch file.
