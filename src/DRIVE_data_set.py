@@ -13,7 +13,7 @@ from patch_extracting import get_imarr, extract
 
 
 class DRIVE_data_set(data.Dataset):
-    def __init__(self, train=True, online=False):
+    def __init__(self, train=True, online=True):
         '''
         when oline set True, it will extract patch from preprocessed images, \
         instead of read patch file.
