@@ -12,6 +12,7 @@
   Multi-Fiber Unit is defined in src/MF_UNet2.py. 
   It is based on group convolutino and shared parameters, multiplexers are applied to ficilitate information exchange between fibers.
   ![Multi-Fiber Unit](https://github.com/mitseng/RetinalVesselSegmentation/blob/master/MFUnit.png)
+  Trained modle is given in /ParameterFile.
 
 ## Result
   Proposed model is trained on both dataset, classical U-Net is trained on DRIVE dataset.
