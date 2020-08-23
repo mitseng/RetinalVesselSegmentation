@@ -12,3 +12,14 @@
   Multi-Fiber Unit is defined in src/MF_UNet2.py. 
   It is based on group convolutino and shared parameters, multiplexers are applied to ficilitate information exchange between fibers.
   ![Multi-Fiber Unit](https://github.com/mitseng/RetinalVesselSegmentation/blob/master/MFUnit.png)
+
+## Result
+  Proposed model is trained on both dataset, classical U-Net is trained on DRIVE dataset.
+  This an image from test set of DRIVE and CHASE_DB respectively.
+  ![DRIVE](https://github.com/mitseng/RetinalVesselSegmentation/blob/master/DRIVE_rst.png)
+  ![CHASE_DB](https://github.com/mitseng/RetinalVesselSegmentation/blob/master/CHASE_DB_rst.png)
+  Various metrics are used to compare the performence of two modles, the most advantage of MF-U-Net is parameter size.
+  | Modle    | Parameter File |   IOU   | F1-Score |
+  | :------- | -------------: |  -----: | -------: |
+  | U-Net    |          32.6MB|  0.6850 |   0.8131 |
+  | MF-U-Net |          7.6MB |  0.6837 |   0.8121 |
