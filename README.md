@@ -1,5 +1,5 @@
 # RetinalVesselSegmentation
-  Retinal blood vessel segmentation based on FCN. 
+  Retinal blood vessel segmentation based on U-Net. 
   The modle is a U-Net, We replace Residual Double Convolution Unit with Multi-Fiber Unit, 
   which reduces the model parameters by 76.1%, while performance remains basically unchanged.
   
