@@ -9,8 +9,8 @@
   
 ## Model
   Models can be found in src/U_Net2.py and src/MF_UNet2.py, proposed model is located in the latter file. 
-  Multi-Fiber Unit is defined in src/MF_UNet2.py. 
-  It is based on group convolutino and shared parameters, multiplexers are applied to ficilitate information exchange between fibers.
+  Multi-Fiber Unit is defined in src/MF_UNet2.py.
+  It is based on grouped convolution, multiplexers are applied to ficilitate information exchange between fibers.
   ![Multi-Fiber Unit](https://github.com/mitseng/RetinalVesselSegmentation/blob/master/MFUnit.png)
   Trained model is given in /ParameterFile.
 
