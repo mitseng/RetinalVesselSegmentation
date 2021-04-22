@@ -48,16 +48,17 @@ def metrics(pred, lable):
 
     TP = np.count_nonzero((pred + lable) == 2)  # true positive
     TN = np.count_nonzero((pred + lable) == 0)  # true negative
-    FP = np.count_nonzero(pred > lable)        # false positive
-    FN = np.count_nonzero(pred < lable)        # false negative
+    FP = np.count_nonzero(pred > lable)         # false positive
+    FN = np.count_nonzero(pred < lable)         # false negative
 
-    smooth = 1e-9                                # avoid devide zero
+    smooth = 1e-9                                   # avoid devide zero
     acc = (TP + TN) / (TP + TN + FP + FN + smooth)  # accuracy
-    sn = TP / (TP + FP + smooth)                    # sensitivity, or precision
-    sp = TN / (TN + FN + smooth)                    # specificity
-    rc = TP / (TP + FN + smooth)                    # recall
-    f1 = 2 * sn * rc / (sn + rc + smooth)           # F1 mesure
+    sn = TP / (TP + FN + smooth)                    # sensitivity, or recall
+    sp = TN / (TN + FP + smooth)                    # specificity
+    pr = TP / (TP + FP + smooth)                    # precission
+    f1 = 2 * pr * rc / (pr + rc + smooth)           # F1 mesure
     jac = TP / (TP + FN + FP + smooth)              # jaccard coefficient
+    dice = 2 * TP / (2 * TP + FP + FN = smooth)     # dice coefficient
 
     # return metrics as dictionary
     met_dict['TP'] = TP
@@ -67,9 +68,10 @@ def metrics(pred, lable):
     met_dict['acc'] = acc
     met_dict['sn'] = sn
     met_dict['sp'] = sp
-    met_dict['rc'] = rc
+    met_dict['pr'] = pr
     met_dict['f1'] = f1
     met_dict['jac'] = jac
+    met_dict['dice'] = dice
     return met_dict
 
 
