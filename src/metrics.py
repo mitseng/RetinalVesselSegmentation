@@ -56,9 +56,9 @@ def metrics(pred, lable):
     sn = TP / (TP + FN + smooth)                    # sensitivity, or recall
     sp = TN / (TN + FP + smooth)                    # specificity
     pr = TP / (TP + FP + smooth)                    # precession
-    f1 = 2 * pr * rc / (pr + rc + smooth)           # F1 mesure
-    jac = TP / (TP + FN + FP + smooth)              # jaccard coefficient
-    dice = 2 * TP / (2 * TP + FP + FN = smooth)     # dice coefficient
+    f1 = 2 * pr * sn / (pr + sn + smooth)           # F1 mesure
+    jac = TP / (TP + FN + FP + smooth)              # jaccard coefficient, IOU
+    dice = 2 * TP / (2 * TP + FP + FN + smooth)     # dice coefficient
 
     # return metrics as dictionary
     met_dict['TP'] = TP
